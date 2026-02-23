@@ -8,7 +8,8 @@ import argparse
 import subprocess
 import tempfile
 from pathlib import Path
-from typing import Optional
+
+
 
 from ffmpeg_service import FFmpegService
 from quality_assurance import QualityAssurance

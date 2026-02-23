@@ -21,36 +21,45 @@ TARGET_TP = -1.5
 SKILL_LABELS = {
     "dead-air": "skill_dead_air.DeadAirRemoval",
     "captions": "skill_captions.CaptionGeneration",
-    "chapters": "skill_chapters.ChapterGeneration",
-    "animation": "skill_animation.AnimationGeneration",
-    "cloning": "skill_cloning.VideoCloning",
-    "gif": "skill_gif.GifIntegration",
-    "broll": "skill_broll.BRollIntegration",
+    "chapters": "skill_chapters.ChapterGenerator",
+    "animation": "skill_animation.AnimationOverlay",
+    "style": "skill_style.StyleTransfer",
+    "gif": "skill_gif.GifManager",
+    "broll": "skill_broll.BRollInserter",
     "audio": "skill_audio.AudioEnhancement",
-    "thumbnail": "skill_thumbnail.ThumbnailGeneration",
-    "short-form": "skill_shortform.ShortFormExtraction",
-    "transitions": "skill_transitions.TransitionsEffects",
-    "template": "skill_template.VideoTemplateEngine",
-    "script": "skill_script.ScriptGeneration",
-    "voiceover": "skill_voiceover.VoiceoverGeneration",
+    "thumbnail": "skill_thumbnail.ThumbnailGenerator",
+    "short-form": "skill_shortform.ShortFormExtractor",
+    "transitions": "skill_transitions.TransitionManager",
+    "template": "skill_template.TemplateEngine",
+    "script": "skill_script.ScriptGenerator",
+    "voiceover": "skill_voiceover.VoiceoverGenerator",
     "color": "skill_color.ColorGrading",
     "brand": "skill_brand.BrandKitManager",
-    "multi-format": "skill_multiformat.MultiFormatExport",
-    "youtube": "skill_youtube.YouTubePublishing",
+    "export": "skill_export.MultiFormatExporter",
+    "youtube": "skill_youtube.YouTubePublisher",
 }
 
 # Skill execution order (when multiple skills are requested)
+# Pipeline skills first (video-in/video-out), then generation/export/publish.
 SKILL_ORDER = [
-    "dead-air",      # 1. Clean up first
-    "audio",         # 2. Enhance audio
-    "captions",      # 3. Add captions
-    "chapters",      # 4. Generate chapters
-    "color",         # 5. Apply color grading
-    "brand",         # 6. Apply brand kit
-    "transitions",   # 7. Add transitions
-    "multi-format",  # 8. Export formats
-    "thumbnail",     # 9. Generate thumbnail
-    "youtube",       # 10. Upload and publish
+    "dead-air",      # 1. Clean up silence/dead air
+    "audio",         # 2. Enhance audio quality
+    "style",         # 3. Apply style transfer
+    "color",         # 4. Color grading
+    "brand",         # 5. Apply brand kit (watermark/overlay)
+    "animation",     # 6. Animation overlays
+    "broll",         # 7. Insert B-roll footage
+    "transitions",   # 8. Add transitions between clips
+    "captions",      # 9. Generate/burn captions
+    "chapters",      # 10. Generate chapters
+    "script",        # 11. Generate script/storyboard
+    "voiceover",     # 12. Generate voiceover audio
+    "template",      # 13. Apply video template
+    "gif",           # 14. Extract GIF previews
+    "short-form",    # 15. Extract short-form clips
+    "thumbnail",     # 16. Generate thumbnails
+    "export",        # 17. Multi-format export
+    "youtube",       # 18. Upload and publish
 ]
 
 # V-I-V enforcement

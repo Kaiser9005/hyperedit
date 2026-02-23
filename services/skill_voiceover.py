@@ -5,6 +5,7 @@ Supports merging generated audio with existing video via FFmpeg.
 """
 
 import argparse
+import logging
 import os
 import subprocess
 from pathlib import Path
@@ -128,9 +129,12 @@ class VoiceoverGenerator:
             if audio_path.exists():
                 meta = self.ffmpeg.get_metadata(audio_path)
                 actual_duration = meta.duration
-        except (ValueError, Exception):
-            # Audio-only files may not have video stream; use estimate
-            pass
+        except (ValueError, subprocess.CalledProcessError):
+            # Audio-only files may not report duration via ffprobe; use estimate
+            logging.getLogger(__name__).debug(
+                "Could not read audio metadata for %s, using estimate %.1fs",
+                audio_path, estimated_duration,
+            )
 
         result = {
             "audio_path": str(audio_path),

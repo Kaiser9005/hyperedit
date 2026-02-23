@@ -45,8 +45,12 @@ class BatchProcessor:
         "brand": {"module": "skill_brand", "class": "BrandKitManager", "defaults": {}},
         "transitions": {"module": "skill_transitions", "class": "TransitionManager", "defaults": {}},
         "style": {"module": "skill_style", "class": "StyleTransfer", "defaults": {"style": "cinematic_teal_orange"}},
-        "animation": {"module": "skill_animation", "class": "AnimationOverlay", "defaults": {}},
+        "animation": {"module": "skill_animation", "class": "AnimationOverlay", "defaults": {"overlays": []}},
+        "broll": {"module": "skill_broll", "class": "BRollInserter", "defaults": {}},
     }
+
+    # Non-pipeline skills (different I/O signatures, not video-in/video-out):
+    # chapters, thumbnail, gif, shortform, export, script, voiceover, youtube, template
 
     # Skills that use output_dir instead of output_path
     _DIR_OUTPUT_SKILLS = {"captions"}
@@ -140,6 +144,20 @@ class BatchProcessor:
             shutil.copy2(current_input, final_output)
         else:
             final_output = input_path  # No processing happened
+
+        # === POST-PIPELINE QA ===
+        qa_results = []
+        if final_output != input_path and final_output.exists():
+            try:
+                input_meta = self.ffmpeg.get_metadata(input_path)
+                qa_results = self.qa.full_check(
+                    final_output,
+                    expected_duration=input_meta.duration,
+                    min_width=input_meta.width,
+                    min_height=input_meta.height,
+                )
+            except (ValueError, FileNotFoundError) as e:
+                logger.warning(f"Pipeline QA check failed: {e}")
 
         elapsed = time.time() - start_time
         success = completed == len(steps) or (completed > 0 and len(errors) == 0)

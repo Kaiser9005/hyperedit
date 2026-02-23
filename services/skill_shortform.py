@@ -6,7 +6,6 @@ cutting and cropping.
 """
 
 import argparse
-import sys
 from pathlib import Path
 
 from whisper_service import WhisperService

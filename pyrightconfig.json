@@ -1,0 +1,9 @@
+{
+  "extraPaths": ["services"],
+  "reportMissingImports": false,
+  "reportUnknownMemberType": false,
+  "reportUnknownParameterType": false,
+  "reportUnknownVariableType": false,
+  "reportUnknownArgumentType": false,
+  "pythonVersion": "3.11"
+}

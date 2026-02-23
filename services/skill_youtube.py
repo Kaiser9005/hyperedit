@@ -11,7 +11,7 @@ from __future__ import annotations
 import argparse
 import os
 from pathlib import Path
-from typing import Dict, List, Optional, Union
+from typing import Optional
 
 from ffmpeg_service import FFmpegService
 

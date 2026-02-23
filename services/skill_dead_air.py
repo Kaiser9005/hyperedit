@@ -6,12 +6,11 @@ Uses whisper.cpp for transcription and FFmpeg for cutting.
 
 import argparse
 import shutil
-import sys
 from pathlib import Path
 
 from whisper_service import WhisperService
 from ffmpeg_service import FFmpegService
-from quality_assurance import QualityAssurance, QAResult
+from quality_assurance import QualityAssurance
 
 
 class DeadAirRemoval:

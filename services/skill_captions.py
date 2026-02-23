@@ -70,6 +70,14 @@ class CaptionGeneration:
             self._burn_captions(input_path, srt_path, burned_video, font_size, position)
 
         # === VERIFY (After) ===
+        # Verify each generated caption file exists and is non-empty
+        for file_path_str in generated_files:
+            caption_path = Path(file_path_str)
+            if not caption_path.exists():
+                raise RuntimeError(f"Caption file was not created: {caption_path}")
+            if caption_path.stat().st_size == 0:
+                raise RuntimeError(f"Caption file is empty: {caption_path}")
+
         qa_results = []
         if burned_video and burned_video.exists():
             qa_results = self.qa.full_check(

@@ -113,7 +113,11 @@ class MultiFormatExporter:
                 self._transcode(input_path, output_path, profile)
 
             # === VERIFY (After, per export) ===
+            if not output_path.exists():
+                raise RuntimeError(f"Export was not created: {output_path}")
             out_size = output_path.stat().st_size
+            if out_size == 0:
+                raise RuntimeError(f"Export file is empty (0 bytes): {output_path}")
             if ext == "gif":
                 duration = meta.duration
             else:

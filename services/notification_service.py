@@ -5,7 +5,6 @@ import logging
 import os
 from datetime import datetime
 from enum import Enum
-from pathlib import Path
 from typing import Optional
 
 import httpx

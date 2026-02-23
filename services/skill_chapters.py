@@ -6,7 +6,6 @@ and topic signal analysis. Outputs JSON and/or YouTube timestamp format.
 
 import argparse
 import json
-import sys
 from pathlib import Path
 
 from whisper_service import WhisperService
@@ -117,6 +116,14 @@ class ChapterGenerator:
         result = self._build_result(
             chapters, total_duration, output_path, output_format
         )
+
+        # Verify output files were created
+        for file_path_str in result.get("output_files", []):
+            out_file = Path(file_path_str)
+            if not out_file.exists():
+                raise RuntimeError(f"Chapter output file was not created: {out_file}")
+            if out_file.stat().st_size == 0:
+                raise RuntimeError(f"Chapter output file is empty: {out_file}")
 
         return result
 

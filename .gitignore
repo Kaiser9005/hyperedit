@@ -5,3 +5,21 @@ node_modules/
 worker-configuration.d.ts
 .env
 models/
+
+# Video files (large)
+input_videos/
+output_videos/
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.wav
+*.mp3
+
+# Logs
+logs/
+
+# Python
+__pycache__/
+*.pyc
+.venv/

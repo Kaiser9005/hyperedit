@@ -1,0 +1,18 @@
+[project]
+name = "hyperedit-ai"
+version = "0.1.0"
+description = "Autonomous AI video editing system"
+requires-python = ">=3.9"
+dependencies = [
+    "python-dotenv>=1.0.0",
+    "httpx>=0.27.0",
+    "google-generativeai>=0.8.0",
+    "elevenlabs>=1.0.0",
+    "pydantic>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+]

@@ -35,7 +35,7 @@ class AudioEnhancement:
             raise ValueError(f"Input video has no audio track: {input_path}")
 
         before_loudness = self.ffmpeg.get_loudness(input_path)
-        before_lufs = float(before_loudness.get("input_i", -99))
+        before_lufs = float(str(before_loudness.get("input_i", -99)).replace(",", "."))
 
         # === IMPLEMENT ===
         work_dir = output_path.parent
@@ -71,7 +71,7 @@ class AudioEnhancement:
 
         # === VERIFY (After) ===
         after_loudness = self.ffmpeg.get_loudness(output_path)
-        after_lufs = float(after_loudness.get("input_i", -99))
+        after_lufs = float(str(after_loudness.get("input_i", -99)).replace(",", "."))
         qa_results = self.qa.full_check(output_path, min_width=meta.width, min_height=meta.height)
 
         return {

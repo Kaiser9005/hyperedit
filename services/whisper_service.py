@@ -155,11 +155,11 @@ class WhisperService:
         for line in stderr.split("\n"):
             if "silence_start:" in line:
                 parts = line.split("silence_start:")
-                current_start = float(parts[1].strip())
+                current_start = float(parts[1].strip().replace(",", "."))
             elif "silence_end:" in line and current_start is not None:
                 parts = line.split("silence_end:")
                 end_parts = parts[1].strip().split("|")
-                end_time = float(end_parts[0].strip())
+                end_time = float(end_parts[0].strip().replace(",", "."))
                 silences.append({"start": current_start, "end": end_time})
                 current_start = None
 
@@ -197,7 +197,7 @@ class WhisperService:
         parts = timestamp.split(":")
         if len(parts) == 3:
             h, m, s = parts
-            return float(h) * 3600 + float(m) * 60 + float(s)
+            return float(h) * 3600 + float(m) * 60 + float(s.replace(",", "."))
         return 0.0
 
     def _get_audio_duration(self, audio_path: Path) -> float:
@@ -210,4 +210,4 @@ class WhisperService:
             str(audio_path),
         ]
         result = subprocess.run(cmd, capture_output=True, text=True, check=True)
-        return float(result.stdout.strip())
+        return float(result.stdout.strip().replace(",", "."))

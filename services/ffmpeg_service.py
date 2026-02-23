@@ -63,7 +63,7 @@ class FFmpegService:
             width=int(video_stream.get("width", 0)),
             height=int(video_stream.get("height", 0)),
             fps=round(fps, 2),
-            duration=float(fmt.get("duration", 0)),
+            duration=float(str(fmt.get("duration", 0)).replace(",", ".")),
             codec=video_stream.get("codec_name", "unknown"),
             has_audio=has_audio,
             bitrate=int(fmt.get("bit_rate", 0)),

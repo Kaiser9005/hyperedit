@@ -73,7 +73,7 @@ class QualityAssurance:
         tolerance: float = 2,
     ) -> QAResult:
         loudness = self.ffmpeg.get_loudness(video_path)
-        input_i = float(loudness.get("input_i", -99))
+        input_i = float(str(loudness.get("input_i", -99)).replace(",", "."))
         diff = abs(input_i - target_lufs)
         passed = diff <= tolerance
         return QAResult(

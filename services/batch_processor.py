@@ -10,6 +10,7 @@ from typing import Optional
 from ffmpeg_service import FFmpegService
 from quality_assurance import QualityAssurance
 from notification_service import NotificationService
+from e2e_verifier import E2EVerifier, VerificationConfig
 
 logger = logging.getLogger(__name__)
 
@@ -31,6 +32,7 @@ class PipelineResult:
     duration_seconds: float
     step_results: list = field(default_factory=list)
     errors: list = field(default_factory=list)
+    qa_score: Optional[float] = None
 
 
 class BatchProcessor:
@@ -61,6 +63,7 @@ class BatchProcessor:
     def __init__(self, notifier: Optional[NotificationService] = None):
         self.ffmpeg = FFmpegService()
         self.qa = QualityAssurance()
+        self.verifier = E2EVerifier()
         self.notifier = notifier or NotificationService()
         self._skill_cache = {}
 
@@ -159,6 +162,22 @@ class BatchProcessor:
             except (ValueError, FileNotFoundError) as e:
                 logger.warning(f"Pipeline QA check failed: {e}")
 
+        # === E2E SCORED VERIFICATION (V-I-V Principe 5: Tolerance Zero) ===
+        qa_report = None
+        if final_output != input_path and final_output.exists():
+            try:
+                job_id = f"{input_path.stem}_{int(time.time())}"
+                config = VerificationConfig(
+                    expected_duration=input_meta.duration if qa_results else None,
+                    min_width=1920,
+                    min_height=1080,
+                )
+                qa_report = self.verifier.verify_pipeline_output(job_id, final_output, config)
+                if not qa_report.passed:
+                    logger.warning("E2E score %.1f/10 < threshold — needs review", qa_report.score)
+            except Exception as e:
+                logger.warning("E2E verification failed: %s", e)
+
         elapsed = time.time() - start_time
         success = completed == len(steps) or (completed > 0 and len(errors) == 0)
 
@@ -173,6 +192,7 @@ class BatchProcessor:
             duration_seconds=round(elapsed, 2),
             step_results=step_results,
             errors=errors,
+            qa_score=qa_report.score if qa_report else None,
         )
 
     def _execute_step(self, step: PipelineStep, input_path: Path, output_path: Path) -> dict:

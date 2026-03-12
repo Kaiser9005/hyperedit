@@ -151,19 +151,90 @@ class VoiceoverGenerator:
     def _generate_audio(
         self, text: str, voice_id: str, output_path: Path
     ) -> Path:
-        """Generate speech audio via ElevenLabs API.
+        """Generate speech audio via ElevenLabs REST API with edge-tts fallback.
 
-        This is a placeholder for the actual ElevenLabs API integration.
-        Implement with the ElevenLabs Python SDK or REST API when ready.
+        Tries ElevenLabs first (eleven_multilingual_v2 for French).
+        Falls back to Microsoft Edge TTS (fr-CM-AntoinNeural) on 401/quota errors.
 
-        Raises:
-            NotImplementedError: Always, until ElevenLabs integration is wired up.
+        Args:
+            text: Text to convert to speech.
+            voice_id: ElevenLabs voice ID.
+            output_path: Path for the output audio file.
+
+        Returns:
+            Path to the generated audio file.
         """
-        raise NotImplementedError(
-            "ElevenLabs API integration not yet implemented. "
-            "Set ELEVENLABS_API_KEY and implement this method with the "
-            "ElevenLabs Python SDK (elevenlabs.io)."
+        logger = logging.getLogger(__name__)
+
+        # Try ElevenLabs first
+        if self.api_key:
+            try:
+                return self._generate_audio_elevenlabs(text, voice_id, output_path)
+            except Exception as e:
+                logger.warning("ElevenLabs failed (%s), falling back to edge-tts", e)
+
+        # Fallback to edge-tts (free, no quota)
+        return self._generate_audio_edge_tts(text, output_path)
+
+    def _generate_audio_elevenlabs(
+        self, text: str, voice_id: str, output_path: Path
+    ) -> Path:
+        """Generate speech audio via ElevenLabs REST API."""
+        import httpx
+
+        url = f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}"
+        resp = httpx.post(
+            url,
+            headers={
+                "xi-api-key": self.api_key,
+                "Content-Type": "application/json",
+                "Accept": "audio/mpeg",
+            },
+            json={
+                "text": text,
+                "model_id": "eleven_multilingual_v2",
+                "voice_settings": {
+                    "stability": 0.5,
+                    "similarity_boost": 0.75,
+                },
+            },
+            timeout=120,
         )
+        resp.raise_for_status()
+
+        output_path.write_bytes(resp.content)
+        logger = logging.getLogger(__name__)
+        logger.info("Generated voiceover (ElevenLabs): %s (%d bytes)", output_path.name, len(resp.content))
+        return output_path
+
+    def _generate_audio_edge_tts(
+        self, text: str, output_path: Path, voice: str = "fr-FR-HenriNeural"
+    ) -> Path:
+        """Generate speech audio via Microsoft Edge TTS (free, no quota).
+
+        Uses fr-FR-HenriNeural (professional male French) for narration.
+
+        Args:
+            text: Text to convert to speech.
+            output_path: Path for the output audio file.
+            voice: Edge TTS voice name.
+
+        Returns:
+            Path to the generated audio file.
+        """
+        import asyncio
+
+        async def _run():
+            import edge_tts
+            communicate = edge_tts.Communicate(text, voice, rate="-5%")
+            await communicate.save(str(output_path))
+
+        asyncio.run(_run())
+
+        logger = logging.getLogger(__name__)
+        logger.info("Generated voiceover (edge-tts %s): %s (%d bytes)",
+                     voice, output_path.name, output_path.stat().st_size)
+        return output_path
 
     def _generate_silence_placeholder(
         self, duration: float, output_path: Path

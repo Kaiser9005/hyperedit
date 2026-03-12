@@ -1,9 +1,13 @@
-"""Scheduler service for automated video processing pipeline."""
+"""Scheduler service for automated video processing pipeline.
+
+Supports two persistence modes:
+- JSON file (default, offline): logs/scheduler_state.json
+- Supabase (when DatabaseService provided): he_video_jobs + he_pipeline_steps
+"""
 
 import json
 import logging
 import os
-import time
 from dataclasses import dataclass
 from datetime import datetime
 from enum import Enum
@@ -50,10 +54,12 @@ class SchedulerService:
         input_dir: Optional[Path] = None,
         output_dir: Optional[Path] = None,
         state_file: Optional[Path] = None,
+        db=None,
     ):
         self.input_dir = Path(input_dir or os.getenv("INPUT_DIR", "input_videos"))
         self.output_dir = Path(output_dir or os.getenv("OUTPUT_DIR", "output_videos"))
         self.state_file = Path(state_file or "logs/scheduler_state.json")
+        self.db = db  # Optional DatabaseService for Supabase persistence
         self._queue: list[Job] = []
         self._processed_files: set[str] = set()
         self._job_counter = 0
@@ -87,15 +93,31 @@ class SchedulerService:
         skills: Optional[list[str]] = None,
         priority: int = 0,
     ) -> Job:
-        """Create a new processing job."""
+        """Create a new processing job. Syncs to Supabase if db is available."""
         self._job_counter += 1
         job_id = f"job_{self._job_counter:04d}"
+        skill_list = skills or ["dead_air", "captions", "audio"]
+
+        # Sync to Supabase if available
+        if self.db:
+            try:
+                db_job = self.db.create_job(
+                    title=Path(input_path).stem,
+                    input_path=str(input_path),
+                    pipeline=skill_list,
+                    priority=priority,
+                )
+                job_id = db_job["id"]  # Use Supabase UUID
+                self.db.create_pipeline_steps(job_id, skill_list)
+                logger.info(f"Job {job_id} synced to Supabase")
+            except Exception as e:
+                logger.warning(f"Supabase sync failed, using local: {e}")
 
         job = Job(
             id=job_id,
             input_path=str(input_path),
             output_dir=str(self.output_dir / Path(input_path).stem),
-            skills=skills or ["dead_air", "captions", "audio"],
+            skills=skill_list,
             priority=priority,
         )
         self._queue.append(job)
@@ -121,6 +143,7 @@ class SchedulerService:
             job.status = JobStatus.PROCESSING
             job.started_at = datetime.now().isoformat()
             self._save_state()
+            self._db_update_status(job_id, "processing")
             return job
         return None
 
@@ -132,6 +155,8 @@ class SchedulerService:
             job.completed_at = datetime.now().isoformat()
             job.result = result
             self._save_state()
+            output_path = result.get("output_path") if isinstance(result, dict) else None
+            self._db_update_status(job_id, "completed", output_path=output_path)
             return job
         return None
 
@@ -143,6 +168,7 @@ class SchedulerService:
             job.completed_at = datetime.now().isoformat()
             job.error = error
             self._save_state()
+            self._db_update_status(job_id, "failed", error_message=error)
             return job
         return None
 
@@ -152,8 +178,18 @@ class SchedulerService:
         if job and job.status == JobStatus.QUEUED:
             job.status = JobStatus.CANCELLED
             self._save_state()
+            self._db_update_status(job_id, "cancelled")
             return job
         return None
+
+    def _db_update_status(self, job_id: str, status: str, **kwargs) -> None:
+        """Sync job status to Supabase (best-effort, non-blocking)."""
+        if not self.db:
+            return
+        try:
+            self.db.update_job_status(job_id, status, **kwargs)
+        except Exception as e:
+            logger.warning(f"Supabase status sync failed for {job_id}: {e}")
 
     def get_job(self, job_id: str) -> Optional[Job]:
         """Get a job by ID."""

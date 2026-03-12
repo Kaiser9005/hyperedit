@@ -157,17 +157,40 @@ class ScriptGenerator:
         return "\n".join(prompt_parts)
 
     def _generate_script_from_llm(self, prompt: str) -> str:
-        """Generate script via LLM API call.
+        """Generate script via Claude API.
 
-        This method is designed to be overridden or mocked in tests.
-        In production, it would call the Claude API.
+        Uses Anthropic Claude for intelligent script generation with
+        African storytelling and FOFAL agricultural context awareness.
 
-        Raises:
-            NotImplementedError: When no LLM API is configured (falls back to template).
+        Args:
+            prompt: The formatted script generation prompt.
+
+        Returns:
+            Raw script text in SCENE format.
         """
-        raise NotImplementedError(
-            "LLM API not configured. Using template fallback."
+        import httpx
+        import os
+
+        api_key = os.getenv("ANTHROPIC_API_KEY", "")
+        if not api_key:
+            raise RuntimeError("ANTHROPIC_API_KEY not set — cannot generate script")
+
+        resp = httpx.post(
+            "https://api.anthropic.com/v1/messages",
+            headers={
+                "x-api-key": api_key,
+                "anthropic-version": "2023-06-01",
+                "content-type": "application/json",
+            },
+            json={
+                "model": "claude-sonnet-4-20250514",
+                "max_tokens": 2000,
+                "messages": [{"role": "user", "content": prompt}],
+            },
+            timeout=60,
         )
+        resp.raise_for_status()
+        return resp.json()["content"][0]["text"]
 
     def _parse_script_to_storyboard(
         self, script_text: str, target_duration: float

@@ -24,3 +24,6 @@ __pycache__/
 *.pyc
 .venv/
 .DS_Store
+
+# ERP screen recordings (large video files)
+assets/erp_recordings/

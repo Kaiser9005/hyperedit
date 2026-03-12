@@ -1,0 +1,65 @@
+{
+  "title": "Consulter Mes Informations",
+  "language": "fr",
+  "style": "tutorial",
+  "target_duration": 65,
+  "brand": "fofal",
+  "scenes": [
+    {
+      "id": 1,
+      "title": "Mon Espace Personnel",
+      "scene_category": "team",
+      "narration_text": "En tant qu'utilisateur TerraFlow ERP, vous disposez d'un espace personnel pour consulter vos informations. Decouvrons ensemble les fonctionnalites qui vous sont dediees.",
+      "visual_description": "Espace employe personnalise avec tableau de bord individuel",
+      "ken_burns_preset": "slow_zoom_in",
+      "duration": 11,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/dashboard_main.mp4"
+    },
+    {
+      "id": 2,
+      "title": "Profil et Conges",
+      "scene_category": "team",
+      "narration_text": "Consultez votre profil, vos informations contractuelles, et faites vos demandes de conges directement depuis l'application. Le systeme gere 5 types de conges differents avec un suivi en temps reel.",
+      "visual_description": "Interface de demande de conges et calendrier",
+      "ken_burns_preset": "pan_left",
+      "duration": 13,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/leaves_page.mp4"
+    },
+    {
+      "id": 3,
+      "title": "Bulletins de Paie",
+      "scene_category": "production",
+      "narration_text": "Retrouvez tous vos bulletins de salaire. Chaque fiche detaille le salaire brut, les cotisations CNPS et IRPP, les avances deduites, et le net a payer. Les bulletins sont telechageables en PDF.",
+      "visual_description": "Bulletin de paie detaille avec deductions",
+      "ken_burns_preset": "zoom_in",
+      "duration": 13,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/payroll_main.mp4"
+    },
+    {
+      "id": 4,
+      "title": "Securite du Compte",
+      "scene_category": "plantation",
+      "narration_text": "Pour securiser votre compte, changez regulierement votre mot de passe depuis les parametres. L'authentification a deux facteurs est disponible pour une protection renforcee. Votre compte, votre responsabilite.",
+      "visual_description": "Interface securisee avec parametres de compte",
+      "ken_burns_preset": "slow_zoom_in",
+      "duration": 13,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/settings_user.mp4"
+    }
+  ],
+  "music": {
+    "track": "african_ambient",
+    "volume_db": -18
+  },
+  "transitions": {
+    "type": "crossfade",
+    "duration": 0.8
+  },
+  "watermark": {
+    "text": "TerraFlow ERP",
+    "position": "bottom_right"
+  }
+}

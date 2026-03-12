@@ -1,0 +1,65 @@
+{
+  "title": "Ventes et CRM",
+  "language": "fr",
+  "style": "tutorial",
+  "target_duration": 70,
+  "brand": "fofal",
+  "scenes": [
+    {
+      "id": 1,
+      "title": "Pipeline Commercial",
+      "scene_category": "product_oil",
+      "narration_text": "Le module Ventes et CRM vous permet de gerer tout votre cycle commercial. Du premier contact client a la livraison, suivez chaque etape de votre pipeline de vente.",
+      "visual_description": "Pipeline commercial et gestion des ventes",
+      "ken_burns_preset": "slow_zoom_in",
+      "duration": 13,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/sales_pipeline.mp4"
+    },
+    {
+      "id": 2,
+      "title": "Gestion Clients",
+      "scene_category": "team",
+      "narration_text": "Creez et gerez vos fiches clients avec un scoring intelligent. L'algorithme ML evalue le potentiel de chaque client et suggere des actions commerciales prioritaires.",
+      "visual_description": "Gestion de la relation client et suivi des commandes",
+      "ken_burns_preset": "pan_left",
+      "duration": 12,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/sales_pipeline.mp4"
+    },
+    {
+      "id": 3,
+      "title": "Commandes et Factures",
+      "scene_category": "product_oil",
+      "narration_text": "Creez des commandes et generez des factures en quelques clics. Le systeme gere les prix, les remises, et la conformite OHADA automatiquement. Les factures sont exportables en PDF.",
+      "visual_description": "Huile de palme doree prete a l'expedition commerciale",
+      "ken_burns_preset": "zoom_in",
+      "duration": 13,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/sales_pipeline.mp4"
+    },
+    {
+      "id": 4,
+      "title": "Analyses Commerciales",
+      "scene_category": "plantation",
+      "narration_text": "Visualisez vos performances commerciales: volume de ventes, evolution du chiffre d'affaires, meilleurs clients, et previsions. Les tableaux de bord sont interactifs et personnalisables.",
+      "visual_description": "Graphiques de performance commerciale et tendances",
+      "ken_burns_preset": "pan_right",
+      "duration": 12,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/sales_analytics.mp4"
+    }
+  ],
+  "music": {
+    "track": "african_ambient",
+    "volume_db": -18
+  },
+  "transitions": {
+    "type": "crossfade",
+    "duration": 0.8
+  },
+  "watermark": {
+    "text": "TerraFlow ERP",
+    "position": "bottom_right"
+  }
+}

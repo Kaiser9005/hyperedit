@@ -1,0 +1,76 @@
+{
+  "title": "Authentification et Securite",
+  "language": "fr",
+  "style": "tutorial",
+  "target_duration": 75,
+  "brand": "fofal",
+  "scenes": [
+    {
+      "id": 1,
+      "title": "Connexion Securisee",
+      "scene_category": "team",
+      "narration_text": "La securite de vos donnees commence des la connexion. TerraFlow ERP utilise un systeme d'authentification robuste avec chiffrement de bout en bout. Entrez votre email et mot de passe pour acceder a votre espace.",
+      "visual_description": "Interface de connexion securisee avec formulaire email et mot de passe",
+      "ken_burns_preset": "slow_zoom_in",
+      "duration": 14,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/login_page.mp4"
+    },
+    {
+      "id": 2,
+      "title": "Reinitialisation de Mot de Passe",
+      "scene_category": "team",
+      "narration_text": "En cas d'oubli de mot de passe, la procedure de reinitialisation est simple et securisee. Cliquez sur le lien prevu, entrez votre email, et recevez un lien de reinitialisation. Votre nouveau mot de passe doit respecter les criteres de complexite definis.",
+      "visual_description": "Page de reinitialisation de mot de passe securisee",
+      "ken_burns_preset": "zoom_in",
+      "duration": 14,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/forgot_password.mp4"
+    },
+    {
+      "id": 3,
+      "title": "Tableau de Bord Securite",
+      "scene_category": "plantation",
+      "narration_text": "Le tableau de bord securite offre une vue complete de l'activite du systeme. Consultez les connexions recentes, les tentatives echouees, et les metriques de conformite. Chaque action est tracee dans le journal d'audit.",
+      "visual_description": "Tableau de bord administrateur avec metriques de securite",
+      "ken_burns_preset": "pan_left",
+      "duration": 14,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/dashboard_main.mp4"
+    },
+    {
+      "id": 4,
+      "title": "Roles et Permissions",
+      "scene_category": "team",
+      "narration_text": "TerraFlow ERP gere les acces par roles: Administrateur, Administrateur RH, Manager, Superviseur, et Employe. Chaque role a des permissions specifiques pour chaque module. Seuls les administrateurs peuvent modifier les parametres de securite.",
+      "visual_description": "Interface de gestion des roles et permissions utilisateur",
+      "ken_burns_preset": "pan_right",
+      "duration": 13,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/settings_user.mp4"
+    },
+    {
+      "id": 5,
+      "title": "Protection des Donnees",
+      "scene_category": "plantation",
+      "narration_text": "L'isolation multi-tenant garantit que chaque entreprise ne voit que ses propres donnees. Les politiques de securite au niveau base de donnees protegent automatiquement chaque enregistrement. Vos donnees sont en securite.",
+      "visual_description": "Vue d'ensemble de la securite et protection des donnees",
+      "ken_burns_preset": "slow_zoom_in",
+      "duration": 12,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/dashboard_main.mp4"
+    }
+  ],
+  "music": {
+    "track": "african_ambient",
+    "volume_db": -18
+  },
+  "transitions": {
+    "type": "crossfade",
+    "duration": 0.8
+  },
+  "watermark": {
+    "text": "TerraFlow ERP",
+    "position": "bottom_right"
+  }
+}

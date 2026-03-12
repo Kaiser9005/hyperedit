@@ -1,0 +1,51 @@
+{
+  "name": "FOFAL",
+  "description": "FOFAL — L'Excellence Agricole du Cameroun. Ebondi, Region du Centre.",
+  "colors": {
+    "primary": "#166534",
+    "secondary": "#D97706",
+    "accent": "#78350F",
+    "background": "#0F172A",
+    "text": "#FFFFFF"
+  },
+  "fonts": {
+    "heading": "Cormorant Garamond",
+    "body": "DM Sans"
+  },
+  "watermark": {
+    "text": "FOFAL",
+    "position": "bottom_right",
+    "opacity": 0.3,
+    "font_size": 28
+  },
+  "text_overlay": {
+    "font_size": 42,
+    "font_color": "#FFFFFF",
+    "bg_color": "#16653480",
+    "padding": 12
+  },
+  "transitions": {
+    "type": "crossfade",
+    "duration": 0.8
+  },
+  "music": {
+    "track": null,
+    "volume_db": -18
+  },
+  "scene_categories": [
+    "plantation",
+    "product_oil",
+    "product_papaya",
+    "product_nuts",
+    "team",
+    "harvest",
+    "production",
+    "overview"
+  ],
+  "storytelling": {
+    "style": "african_hero_journey",
+    "language": "fr",
+    "structure": ["origin", "challenge", "excellence", "future"],
+    "tone": "professional_warm"
+  }
+}

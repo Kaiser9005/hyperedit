@@ -1,0 +1,65 @@
+{
+  "title": "Stocks et Inventaire",
+  "language": "fr",
+  "style": "tutorial",
+  "target_duration": 70,
+  "brand": "fofal",
+  "scenes": [
+    {
+      "id": 1,
+      "title": "Gestion des Stocks",
+      "scene_category": "production",
+      "narration_text": "Le module Stocks et Inventaire gere l'ensemble de vos approvisionnements. Economat, intrants agricoles, carburant: tout est suivi en temps reel.",
+      "visual_description": "Entrepot de stockage avec produits et materiaux",
+      "ken_burns_preset": "slow_zoom_in",
+      "duration": 13,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/inventory_economat.mp4"
+    },
+    {
+      "id": 2,
+      "title": "Economat",
+      "scene_category": "production",
+      "narration_text": "L'economat centralise les fournitures courantes. Chaque mouvement de stock est enregistre: entrees, sorties, et transferts entre entrepots. Les alertes de reapprovisionnement sont automatiques.",
+      "visual_description": "Interface economat avec mouvements de stock",
+      "ken_burns_preset": "pan_left",
+      "duration": 13,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/inventory_economat.mp4"
+    },
+    {
+      "id": 3,
+      "title": "Intrants Agricoles",
+      "scene_category": "plantation",
+      "narration_text": "Suivez vos intrants agricoles: engrais, produits phytosanitaires, semences. Le systeme calcule les besoins par parcelle et genere des bons de commande quand le stock est bas.",
+      "visual_description": "Produits agricoles et intrants pour la plantation",
+      "ken_burns_preset": "zoom_in",
+      "duration": 13,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/inventory_inputs.mp4"
+    },
+    {
+      "id": 4,
+      "title": "Inventaires et Valorisation",
+      "scene_category": "product_oil",
+      "narration_text": "Realisez vos inventaires physiques avec le module de comptage. La valorisation des stocks suit les normes OHADA. Les ecarts sont detectes et documentes automatiquement pour un controle rigoureux.",
+      "visual_description": "Produits finis prets pour l'inventaire et la valorisation",
+      "ken_burns_preset": "pan_right",
+      "duration": 12,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/inventory_counts.mp4"
+    }
+  ],
+  "music": {
+    "track": "african_ambient",
+    "volume_db": -18
+  },
+  "transitions": {
+    "type": "crossfade",
+    "duration": 0.8
+  },
+  "watermark": {
+    "text": "TerraFlow ERP",
+    "position": "bottom_right"
+  }
+}

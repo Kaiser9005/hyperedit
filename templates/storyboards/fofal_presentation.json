@@ -1,0 +1,75 @@
+{
+  "title": "FOFAL - L'Excellence Agricole du Cameroun",
+  "language": "fr",
+  "style": "corporate",
+  "target_duration": 120,
+  "brand": "fofal",
+  "scenes": [
+    {
+      "id": 1,
+      "title": "Les Origines",
+      "scene_category": "plantation",
+      "narration_text": "Au coeur du Cameroun, dans la region du Centre, FOFAL cultive l'excellence depuis des annees. Sur 80 hectares de terres fertiles a Ebondi, notre plantation incarne la vision d'une agriculture moderne et durable.",
+      "visual_description": "Vue aerienne de la plantation de palmiers a huile, rangees verdoyantes a perte de vue",
+      "ken_burns_preset": "slow_zoom_in",
+      "duration": 20
+    },
+    {
+      "id": 2,
+      "title": "La Recolte",
+      "scene_category": "harvest",
+      "narration_text": "Chaque jour, nos equipes parcourent les 28 parcelles pour recolter les regimes de palme avec precision. Un travail d'equipe ou chaque geste compte, de la coupe au transport.",
+      "visual_description": "Travailleurs recoltant des regimes de fruits de palme dans la plantation",
+      "ken_burns_preset": "pan_left",
+      "duration": 18
+    },
+    {
+      "id": 3,
+      "title": "La Production",
+      "scene_category": "production",
+      "narration_text": "De la recolte a la transformation, notre processus de production garantit une huile de palme Tenera de qualite superieure. Chaque etape est controlee pour respecter les normes HACCP et nos engagements RSPO.",
+      "visual_description": "Processus de transformation des noix de palme en huile, equipements industriels",
+      "ken_burns_preset": "zoom_in",
+      "duration": 20
+    },
+    {
+      "id": 4,
+      "title": "Nos Produits",
+      "scene_category": "product_oil",
+      "narration_text": "L'huile de palme FOFAL, les noix de palme selectionnees, et nos papayes F1 Horizon — trois produits d'excellence qui portent la signature de notre terroir camerounais sur les marches.",
+      "visual_description": "Presentation des produits FOFAL: huile de palme doree, noix de palme, papayes",
+      "ken_burns_preset": "zoom_in",
+      "duration": 18
+    },
+    {
+      "id": 5,
+      "title": "Notre Equipe",
+      "scene_category": "team",
+      "narration_text": "Plus de 40 collaborateurs, hommes et femmes, font battre le coeur de FOFAL au quotidien. Sous la direction de Jean Paul Fodjo, fondateur visionnaire, chaque membre contribue a notre mission commune.",
+      "visual_description": "Equipe FOFAL au travail, esprit d'equipe et collaboration",
+      "ken_burns_preset": "pan_right",
+      "duration": 20
+    },
+    {
+      "id": 6,
+      "title": "Innovation et Avenir",
+      "scene_category": "plantation",
+      "narration_text": "Avec notre systeme ERP integre, nos certifications ISO 9001 en cours et RSPO, FOFAL trace la voie de l'agriculture intelligente en Afrique. L'avenir de l'agro-industrie camerounaise se construit ici, a Ebondi.",
+      "visual_description": "Vue panoramique de la plantation au coucher du soleil, symbole d'avenir",
+      "ken_burns_preset": "slow_zoom_in",
+      "duration": 22
+    }
+  ],
+  "music": {
+    "track": "african_ambient",
+    "volume_db": -18
+  },
+  "transitions": {
+    "type": "crossfade",
+    "duration": 0.8
+  },
+  "watermark": {
+    "text": "FOFAL",
+    "position": "bottom_right"
+  }
+}

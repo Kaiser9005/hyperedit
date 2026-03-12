@@ -1,0 +1,65 @@
+{
+  "title": "Analytics et KPIs Intelligence",
+  "language": "fr",
+  "style": "tutorial",
+  "target_duration": 75,
+  "brand": "fofal",
+  "scenes": [
+    {
+      "id": 1,
+      "title": "Tableaux de Bord Analytiques",
+      "scene_category": "plantation",
+      "narration_text": "Le module Analytics de TerraFlow ERP offre une vision complete de la performance de l'entreprise. Avec plus de 30 services d'analyse et d'intelligence artificielle, prenez des decisions eclairees.",
+      "visual_description": "Vue panoramique de la plantation avec superposition de donnees analytiques",
+      "ken_burns_preset": "slow_zoom_in",
+      "duration": 14,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/analytics_dashboard.mp4"
+    },
+    {
+      "id": 2,
+      "title": "Predictions ML",
+      "scene_category": "plantation",
+      "narration_text": "Nos algorithmes de machine learning analysent les tendances de production, predisent les rendements, et detectent les anomalies. Les predictions sont mises a jour automatiquement chaque semaine.",
+      "visual_description": "Graphiques de prediction et courbes de tendance",
+      "ken_burns_preset": "zoom_in",
+      "duration": 13,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/analytics_dashboard.mp4"
+    },
+    {
+      "id": 3,
+      "title": "KPIs Financiers",
+      "scene_category": "production",
+      "narration_text": "Suivez vos indicateurs financiers en temps reel: chiffre d'affaires, couts de production, marges par produit, et evolution mensuelle. Tout est visible d'un coup d'oeil.",
+      "visual_description": "Tableau de bord financier avec graphiques en temps reel",
+      "ken_burns_preset": "pan_left",
+      "duration": 14,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/accounting_dashboard.mp4"
+    },
+    {
+      "id": 4,
+      "title": "Exports et Rapports",
+      "scene_category": "team",
+      "narration_text": "Exportez vos donnees en PDF, Excel ou CSV. Programmez des rapports automatiques et partagez-les avec votre equipe. L'intelligence est au service de votre productivite.",
+      "visual_description": "Interface d'export et de partage de rapports",
+      "ken_burns_preset": "pan_right",
+      "duration": 12,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/analytics_exports.mp4"
+    }
+  ],
+  "music": {
+    "track": "african_ambient",
+    "volume_db": -18
+  },
+  "transitions": {
+    "type": "crossfade",
+    "duration": 0.8
+  },
+  "watermark": {
+    "text": "TerraFlow ERP",
+    "position": "bottom_right"
+  }
+}

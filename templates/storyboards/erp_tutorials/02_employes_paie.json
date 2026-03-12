@@ -1,0 +1,76 @@
+{
+  "title": "Gerer les Employes et la Paie",
+  "language": "fr",
+  "style": "tutorial",
+  "target_duration": 80,
+  "brand": "fofal",
+  "scenes": [
+    {
+      "id": 1,
+      "title": "Module Employes",
+      "scene_category": "team",
+      "narration_text": "Le module Employes est le coeur de la gestion des ressources humaines de votre entreprise. Il vous permet de gerer l'ensemble des dossiers du personnel et de suivre vos collaborateurs actifs.",
+      "visual_description": "Interface de gestion du personnel, liste des employes",
+      "ken_burns_preset": "slow_zoom_in",
+      "duration": 13,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/employee_list.mp4"
+    },
+    {
+      "id": 2,
+      "title": "Dossiers Employes",
+      "scene_category": "team",
+      "narration_text": "Chaque employe dispose d'un dossier complet: informations personnelles, contrat, poste, departement, et historique. Vous pouvez filtrer la liste par statut, departement ou parcelle d'affectation.",
+      "visual_description": "Fiches employes numeriques avec informations detaillees",
+      "ken_burns_preset": "pan_left",
+      "duration": 14,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/employee_detail.mp4"
+    },
+    {
+      "id": 3,
+      "title": "Calcul de Paie",
+      "scene_category": "production",
+      "narration_text": "Le calculateur de paie integre les regles camerounaises: CNPS, IRPP, et les cotisations sociales. Il calcule automatiquement le salaire net a partir du brut, en tenant compte de toutes les deductions legales.",
+      "visual_description": "Processus de calcul automatise, chiffres et tableaux",
+      "ken_burns_preset": "zoom_in",
+      "duration": 15,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/payroll_calculator.mp4"
+    },
+    {
+      "id": 4,
+      "title": "Avances sur Salaire",
+      "scene_category": "team",
+      "narration_text": "Le systeme centralise toutes vos avances sur salaire. Chaque avance est tracee et deductible automatiquement lors du calcul de paie. Suivi simplifie et transparent.",
+      "visual_description": "Tableau de suivi des avances et des paiements",
+      "ken_burns_preset": "pan_right",
+      "duration": 13,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/payroll_advances.mp4"
+    },
+    {
+      "id": 5,
+      "title": "Rapports",
+      "scene_category": "plantation",
+      "narration_text": "Generez des rapports de paie complets, des bulletins individuels, et des analyses tendancielles. Toutes les donnees sont exportables en PDF ou Excel pour vos besoins comptables.",
+      "visual_description": "Rapports et graphiques analytiques de paie",
+      "ken_burns_preset": "slow_zoom_in",
+      "duration": 12,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/payroll_main.mp4"
+    }
+  ],
+  "music": {
+    "track": "african_ambient",
+    "volume_db": -18
+  },
+  "transitions": {
+    "type": "crossfade",
+    "duration": 0.8
+  },
+  "watermark": {
+    "text": "TerraFlow ERP",
+    "position": "bottom_right"
+  }
+}

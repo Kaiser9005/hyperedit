@@ -1,0 +1,75 @@
+{
+  "title": "Agriculture et Gestion des Parcelles",
+  "language": "fr",
+  "style": "tutorial",
+  "target_duration": 80,
+  "brand": "fofal",
+  "scenes": [
+    {
+      "id": 1,
+      "title": "Module Agriculture",
+      "scene_category": "plantation",
+      "narration_text": "Le module Agriculture de TerraFlow ERP gere l'ensemble de vos operations agricoles sur vos parcelles. De la planification des cycles de culture au suivi des recoltes, tout est integre.",
+      "visual_description": "Module agriculture TerraFlow ERP, gestion des parcelles",
+      "ken_burns_preset": "slow_zoom_in",
+      "duration": 14,
+      "scene_type": "branding"
+    },
+    {
+      "id": 2,
+      "title": "Cycles de Culture",
+      "scene_category": "plantation",
+      "narration_text": "Gerez les cycles de culture de vos palmiers a huile et papayes F1 Horizon. Le systeme suit chaque etape: preparation du sol, plantation, entretien, et recolte, avec des rappels automatiques.",
+      "visual_description": "Rangees de palmiers a huile avec indicateurs de croissance",
+      "ken_burns_preset": "pan_left",
+      "duration": 14,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/agriculture_crop_cycles.mp4"
+    },
+    {
+      "id": 3,
+      "title": "Suivi des Recoltes",
+      "scene_category": "harvest",
+      "narration_text": "Enregistrez chaque recolte avec precision: parcelle, quantite, qualite, et equipe. Les donnees alimentent automatiquement les analyses de rendement et les predictions saisonnieres.",
+      "visual_description": "Recolte de regimes de palme sur la plantation",
+      "ken_burns_preset": "zoom_in",
+      "duration": 13,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/agriculture_harvests.mp4"
+    },
+    {
+      "id": 4,
+      "title": "Meteo et Predictions",
+      "scene_category": "plantation",
+      "narration_text": "L'integration meteo fournit des previsions localisees pour Ebondi. Les algorithmes predictifs ajustent les recommandations de recolte et d'entretien en fonction des conditions climatiques.",
+      "visual_description": "Donnees meteorologiques superposees sur la carte des parcelles",
+      "ken_burns_preset": "pan_right",
+      "duration": 13,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/agriculture_weather.mp4"
+    },
+    {
+      "id": 5,
+      "title": "Operations Terrain",
+      "scene_category": "harvest",
+      "narration_text": "Planifiez et suivez toutes les operations terrain: desherbage, traitement phytosanitaire, fertilisation, et transport. Chaque operation est liee a un cout et un responsable pour un controle total.",
+      "visual_description": "Equipes terrain en action sur les parcelles",
+      "ken_burns_preset": "slow_zoom_in",
+      "duration": 13,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/agriculture_main.mp4"
+    }
+  ],
+  "music": {
+    "track": "african_ambient",
+    "volume_db": -18
+  },
+  "transitions": {
+    "type": "crossfade",
+    "duration": 0.8
+  },
+  "watermark": {
+    "text": "TerraFlow ERP",
+    "position": "bottom_right"
+  }
+}

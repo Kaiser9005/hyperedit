@@ -1,0 +1,76 @@
+{
+  "title": "Travail Journalier et Operations",
+  "language": "fr",
+  "style": "tutorial",
+  "target_duration": 75,
+  "brand": "fofal",
+  "scenes": [
+    {
+      "id": 1,
+      "title": "Saisie Quotidienne",
+      "scene_category": "harvest",
+      "narration_text": "Le module Travail Journalier permet de saisir les activites quotidiennes de chaque employe sur le terrain. C'est l'outil central du suivi operationnel de votre entreprise.",
+      "visual_description": "Travailleurs sur le terrain avec outils de saisie",
+      "ken_burns_preset": "slow_zoom_in",
+      "duration": 14,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/daily_work.mp4"
+    },
+    {
+      "id": 2,
+      "title": "Catalogue Operations",
+      "scene_category": "plantation",
+      "narration_text": "Plus de 125 types d'operations sont disponibles dans le catalogue: recolte, entretien, traitement, transport, et bien d'autres. Chaque operation est associee a un tarif et une parcelle.",
+      "visual_description": "Vue aerienne des parcelles avec marqueurs d'operations",
+      "ken_burns_preset": "pan_left",
+      "duration": 13,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/daily_work.mp4"
+    },
+    {
+      "id": 3,
+      "title": "Validation",
+      "scene_category": "team",
+      "narration_text": "Le superviseur valide les saisies quotidiennes. Le systeme detecte automatiquement les anomalies: quantites inhabituelles, doublons, ou operations manquantes. La validation est rapide et fiable.",
+      "visual_description": "Ecran de validation avec indicateurs de verification",
+      "ken_burns_preset": "zoom_in",
+      "duration": 13,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/daily_work_validation.mp4"
+    },
+    {
+      "id": 4,
+      "title": "Suivi par Parcelle",
+      "scene_category": "plantation",
+      "narration_text": "Suivez la productivite de chacune de vos parcelles. Les tableaux de bord montrent les rendements, les couts, et les tendances par zone. Un outil indispensable pour optimiser les operations.",
+      "visual_description": "Carte des parcelles avec donnees de productivite",
+      "ken_burns_preset": "pan_right",
+      "duration": 13,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/agriculture_parcels.mp4"
+    },
+    {
+      "id": 5,
+      "title": "Rapports Terrain",
+      "scene_category": "harvest",
+      "narration_text": "Les rapports terrain sont generes automatiquement. Consultez les bilans journaliers, hebdomadaires et mensuels pour piloter vos equipes et prendre les bonnes decisions.",
+      "visual_description": "Graphiques de suivi terrain et indicateurs de performance",
+      "ken_burns_preset": "slow_zoom_in",
+      "duration": 11,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/daily_work.mp4"
+    }
+  ],
+  "music": {
+    "track": "african_ambient",
+    "volume_db": -18
+  },
+  "transitions": {
+    "type": "crossfade",
+    "duration": 0.8
+  },
+  "watermark": {
+    "text": "TerraFlow ERP",
+    "position": "bottom_right"
+  }
+}

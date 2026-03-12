@@ -1,0 +1,65 @@
+{
+  "title": "Parametres et Configuration",
+  "language": "fr",
+  "style": "tutorial",
+  "target_duration": 65,
+  "brand": "fofal",
+  "scenes": [
+    {
+      "id": 1,
+      "title": "Preferences Utilisateur",
+      "scene_category": "team",
+      "narration_text": "Personnalisez votre experience TerraFlow ERP depuis la page des parametres. Modifiez vos informations personnelles, votre langue d'affichage, et vos preferences de notification. Chaque utilisateur peut adapter l'interface a ses besoins.",
+      "visual_description": "Page des parametres utilisateur avec options de personnalisation",
+      "ken_burns_preset": "slow_zoom_in",
+      "duration": 14,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/settings_user.mp4"
+    },
+    {
+      "id": 2,
+      "title": "Navigation et Interface",
+      "scene_category": "team",
+      "narration_text": "Le menu lateral s'adapte a votre role. Les sections sont organisees par domaine: Ressources Humaines, Agriculture, Finance, Equipements. Accedez rapidement a vos modules les plus utilises.",
+      "visual_description": "Menu de navigation lateral avec sections organisees par role",
+      "ken_burns_preset": "pan_left",
+      "duration": 12,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/sidebar_navigation.mp4"
+    },
+    {
+      "id": 3,
+      "title": "Configuration Entreprise",
+      "scene_category": "plantation",
+      "narration_text": "Les administrateurs configurent les parametres globaux de l'entreprise: informations legales, exercice comptable, devises, et fuseaux horaires. Ces parametres s'appliquent a tous les modules du systeme.",
+      "visual_description": "Tableau de bord administrateur avec configuration globale",
+      "ken_burns_preset": "zoom_in",
+      "duration": 13,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/dashboard_main.mp4"
+    },
+    {
+      "id": 4,
+      "title": "Aide et Support",
+      "scene_category": "team",
+      "narration_text": "Le centre d'aide integre propose des guides interactifs, des tours guides pour chaque module, et un centre de formation avec des videos tutorielles. N'hesitez pas a explorer toutes les ressources disponibles pour maitriser TerraFlow ERP.",
+      "visual_description": "Centre d'aide avec guides interactifs et ressources de formation",
+      "ken_burns_preset": "pan_right",
+      "duration": 13,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/agriculture_main.mp4"
+    }
+  ],
+  "music": {
+    "track": "african_ambient",
+    "volume_db": -18
+  },
+  "transitions": {
+    "type": "crossfade",
+    "duration": 0.8
+  },
+  "watermark": {
+    "text": "TerraFlow ERP",
+    "position": "bottom_right"
+  }
+}

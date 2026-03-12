@@ -1,0 +1,75 @@
+{
+  "title": "Premiers Pas - Se Connecter et Explorer",
+  "language": "fr",
+  "style": "tutorial",
+  "target_duration": 75,
+  "brand": "fofal",
+  "scenes": [
+    {
+      "id": 1,
+      "title": "Bienvenue",
+      "scene_category": "plantation",
+      "narration_text": "Bienvenue dans TerraFlow ERP, votre plateforme de gestion integree pour l'entreprise agricole. Dans ce tutoriel, nous allons decouvrir ensemble comment vous connecter et explorer les fonctionnalites principales.",
+      "visual_description": "Ecran d'accueil TerraFlow ERP, ambiance professionnelle",
+      "ken_burns_preset": "slow_zoom_in",
+      "duration": 12,
+      "scene_type": "branding"
+    },
+    {
+      "id": 2,
+      "title": "Connexion",
+      "scene_category": "team",
+      "narration_text": "Pour vous connecter, rendez-vous sur la page de login. Entrez votre adresse email et votre mot de passe. Si c'est votre premiere connexion, utilisez les identifiants fournis par votre administrateur.",
+      "visual_description": "Interface de connexion securisee, ecran moderne",
+      "ken_burns_preset": "zoom_in",
+      "duration": 13,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/login_page.mp4"
+    },
+    {
+      "id": 3,
+      "title": "Tableau de Bord",
+      "scene_category": "plantation",
+      "narration_text": "Une fois connecte, vous arrivez sur le tableau de bord principal. Ici, vous retrouvez vos indicateurs cles: chiffre d'affaires, nombre d'employes actifs, operations en cours, et les alertes importantes.",
+      "visual_description": "Dashboard avec graphiques et indicateurs de performance",
+      "ken_burns_preset": "pan_left",
+      "duration": 14,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/dashboard_main.mp4"
+    },
+    {
+      "id": 4,
+      "title": "Navigation",
+      "scene_category": "team",
+      "narration_text": "Le menu lateral vous donne acces a tous les modules: Employes, Paie, Agriculture, Production, Ventes, et bien d'autres. Chaque module est adapte a votre role dans l'entreprise.",
+      "visual_description": "Menu de navigation laterale avec icones de modules",
+      "ken_burns_preset": "pan_right",
+      "duration": 13,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/sidebar_navigation.mp4"
+    },
+    {
+      "id": 5,
+      "title": "Checklist et Aide",
+      "scene_category": "plantation",
+      "narration_text": "N'oubliez pas votre checklist d'integration accessible depuis le bouton d'aide. Elle vous guidera pas a pas dans la prise en main de chaque fonctionnalite. Bonne exploration!",
+      "visual_description": "Guide d'aide et checklist d'onboarding",
+      "ken_burns_preset": "slow_zoom_in",
+      "duration": 12,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/agriculture_main.mp4"
+    }
+  ],
+  "music": {
+    "track": "african_ambient",
+    "volume_db": -18
+  },
+  "transitions": {
+    "type": "crossfade",
+    "duration": 0.8
+  },
+  "watermark": {
+    "text": "TerraFlow ERP",
+    "position": "bottom_right"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "title": "Finance et Transactions",
+  "language": "fr",
+  "style": "tutorial",
+  "target_duration": 75,
+  "brand": "fofal",
+  "scenes": [
+    {
+      "id": 1,
+      "title": "Vue d'Ensemble Financiere",
+      "scene_category": "production",
+      "narration_text": "Le module Finance de TerraFlow ERP centralise toutes vos operations financieres. De la paie aux transactions courantes, chaque mouvement est enregistre et traçable. Visualisez votre sante financiere en temps reel.",
+      "visual_description": "Tableau de bord financier avec indicateurs de performance",
+      "ken_burns_preset": "slow_zoom_in",
+      "duration": 14,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/payroll_main.mp4"
+    },
+    {
+      "id": 2,
+      "title": "Historique des Transactions",
+      "scene_category": "production",
+      "narration_text": "Consultez l'historique complet de vos transactions financieres. Filtrez par periode, par type, ou par montant. Chaque transaction est liee a son module d'origine: paie, achats, ventes, ou operations courantes.",
+      "visual_description": "Liste des transactions financieres avec filtres avances",
+      "ken_burns_preset": "pan_left",
+      "duration": 13,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/accounting_entries.mp4"
+    },
+    {
+      "id": 3,
+      "title": "Calculs et Taxes",
+      "scene_category": "team",
+      "narration_text": "Le moteur de calcul integre gere automatiquement les taxes locales, les cotisations sociales, et les retenues. Les calculs sont conformes a la reglementation en vigueur et mis a jour regulierement.",
+      "visual_description": "Interface de calcul des taxes et cotisations",
+      "ken_burns_preset": "zoom_in",
+      "duration": 13,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/payroll_calculator.mp4"
+    },
+    {
+      "id": 4,
+      "title": "Rapports Financiers",
+      "scene_category": "product_oil",
+      "narration_text": "Generez des rapports financiers complets: bilan, compte de resultat, tableaux de flux. Les rapports sont exportables en PDF et conformes aux normes OHADA pour vos obligations legales.",
+      "visual_description": "Generation et consultation de rapports financiers",
+      "ken_burns_preset": "pan_right",
+      "duration": 13,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/accounting_reports.mp4"
+    },
+    {
+      "id": 5,
+      "title": "Analyses et Tendances",
+      "scene_category": "plantation",
+      "narration_text": "Les outils d'analyse financiere vous permettent de suivre les tendances, comparer les periodes, et anticiper les besoins de tresorerie. L'intelligence artificielle detecte les anomalies et vous alerte automatiquement.",
+      "visual_description": "Graphiques d'analyse financiere et detection d'anomalies",
+      "ken_burns_preset": "slow_zoom_in",
+      "duration": 12,
+      "scene_type": "ui_recording",
+      "recording_path": "/Users/cherylmaevahfodjo/hyperedit-ai/assets/erp_recordings/analytics_dashboard.mp4"
+    }
+  ],
+  "music": {
+    "track": "african_ambient",
+    "volume_db": -18
+  },
+  "transitions": {
+    "type": "crossfade",
+    "duration": 0.8
+  },
+  "watermark": {
+    "text": "TerraFlow ERP",
+    "position": "bottom_right"
+  }
+}

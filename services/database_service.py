@@ -16,20 +16,40 @@ logger = logging.getLogger(__name__)
 def _get_client():
     """Lazy-load Supabase client to allow mocking in tests.
 
-    Uses service_role key (bypasses RLS) since HyperEdit is a server-side
-    batch processor. Falls back to anon key if service_role not set.
+    FOF-1420: the FOFAL service_role key is NEVER used client-side anymore.
+    Connects with the publishable anon key and, when CLIPWISE_DB_EMAIL /
+    CLIPWISE_DB_PASSWORD are set, upgrades to an authenticated session via
+    GoTrue password sign-in. Access is RLS-scoped on the he_* tables
+    ("Authenticated read" / "Super-admin write", FOFAL migration
+    20260612012319_fof1420_clipwise_he_tables_r255_scoped_access).
+
+    Without credentials the layer is dormant and fails closed (anon has
+    zero grants on he_* tables). Activation runbook (operator): provision
+    a dedicated zero-privilege auth user (NO app_metadata.role, NO
+    tenant_id) via the GoTrue admin API, then set CLIPWISE_DB_EMAIL /
+    CLIPWISE_DB_PASSWORD in .env — full steps in the migration header.
     """
     from dotenv import load_dotenv
     from supabase import create_client
 
     load_dotenv()
     url = os.getenv("SUPABASE_URL", "")
-    key = os.getenv("SUPABASE_SERVICE_ROLE_KEY") or os.getenv("SUPABASE_ANON_KEY", "")
+    key = os.getenv("SUPABASE_ANON_KEY", "")
     if not url or not key:
-        raise RuntimeError(
-            "SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY (or SUPABASE_ANON_KEY) must be set in .env"
+        raise RuntimeError("SUPABASE_URL and SUPABASE_ANON_KEY must be set in .env")
+    client = create_client(url, key)
+
+    email = os.getenv("CLIPWISE_DB_EMAIL", "")
+    password = os.getenv("CLIPWISE_DB_PASSWORD", "")
+    if email and password:
+        client.auth.sign_in_with_password({"email": email, "password": password})
+    else:
+        logger.warning(
+            "CLIPWISE_DB_EMAIL/CLIPWISE_DB_PASSWORD not set — DB layer is dormant "
+            "(he_* reads/writes denied by RLS). FOF-1420 activation runbook: "
+            "FOFAL migration 20260612012319_fof1420_clipwise_he_tables_r255_scoped_access."
         )
-    return create_client(url, key)
+    return client
 
 
 class DatabaseService:

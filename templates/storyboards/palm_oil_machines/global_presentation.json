@@ -1,0 +1,152 @@
+{
+  "title": "FOFAL — Ligne 1 TPH Huile de Palme",
+  "duration_target": 210,
+  "persona": "Investisseur",
+  "music": "african_ambient",
+  "music_volume": -18,
+  "voice": "daniel",
+  "language": "fr",
+  "render_dir": "~/modules-rh-authentification-expert-00-9/palm-oil-machinery/assets/renders",
+  "brand_dir": "~/hyperedit-ai/assets/brand/fofal",
+  "output": "~/modules-rh-authentification-expert-00-9/palm-oil-machinery/docs/videos/FOFAL_ligne_1TPH_presentation.mp4",
+  "scenes": [
+    {
+      "id": 1,
+      "type": "branding",
+      "duration": 5,
+      "source_image": "logo_fofal.webp",
+      "text": "Ligne 1 TPH Huile de Palme",
+      "style": "fade_in",
+      "narration": null
+    },
+    {
+      "id": 2,
+      "type": "branding",
+      "duration": 15,
+      "source_images": ["hero-bg.webp", "histoire-plantation.webp"],
+      "ken_burns": {"direction": "slow_zoom_in", "speed": "slow"},
+      "narration": "FOFAL exploite 200 hectares de palmiers à huile à Ebondi, Région du Centre, Cameroun. Notre ligne de transformation de 1 tonne par heure transforme les régimes de palme en huile CPO de qualité."
+    },
+    {
+      "id": 3,
+      "type": "3d_model",
+      "duration": 20,
+      "source_images": ["cuiseur_E001_isometric.png", "cuiseur_E001_front.png"],
+      "split": [12, 8],
+      "ken_burns": {"direction": "slow_zoom_in", "speed": "slow"},
+      "annotations": {"name": "Cuiseur-Stérilisateur", "tag": "E-001", "spec": "2 × 1.5 m³ / Vapeur 3 bar"},
+      "narration": "Le cuiseur stérilise les régimes de palme pendant 90 minutes à 3 bars de pression. Sa conception à double cuve maximise le rendement d'extraction."
+    },
+    {
+      "id": 4,
+      "type": "3d_model",
+      "duration": 20,
+      "source_images": ["egrappoir_E002_isometric.png", "egrappoir_E002_right.png"],
+      "split": [12, 8],
+      "ken_burns": {"direction": "pan_right", "speed": "slow"},
+      "annotations": {"name": "Égrappoir Rotatif", "tag": "E-002", "spec": "1 t/h FFB"},
+      "narration": "L'égrappoir sépare les fruits des rafles par rotation mécanique. Capacité : 1 tonne de régimes par heure."
+    },
+    {
+      "id": 5,
+      "type": "3d_model",
+      "duration": 20,
+      "source_images": ["digesteur-presse_E003_isometric.png", "digesteur-presse_E003_front.png"],
+      "split": [12, 8],
+      "ken_burns": {"direction": "slow_zoom_in", "speed": "slow"},
+      "annotations": {"name": "Digesteur-Presse", "tag": "E-003", "spec": "Extraction 18%"},
+      "narration": "Le digesteur-presse combiné malaxe puis presse les fruits pour extraire l'huile brute. Taux d'extraction : 18%."
+    },
+    {
+      "id": 6,
+      "type": "3d_model",
+      "duration": 20,
+      "source_images": ["clarification_E004_isometric.png", "clarification_E004_front.png"],
+      "split": [12, 8],
+      "ken_burns": {"direction": "pan_left", "speed": "slow"},
+      "annotations": {"name": "Clarificateur Vortex", "tag": "E-004", "spec": "Brevet B2"},
+      "narration": "Le clarificateur vortex breveté sépare l'huile des boues par décantation centrifuge. Brevet FOFAL B2."
+    },
+    {
+      "id": 7,
+      "type": "3d_model",
+      "duration": 20,
+      "source_images": ["concasseur_E005_isometric.png", "concasseur_E005_right.png"],
+      "split": [12, 8],
+      "ken_burns": {"direction": "pan_right", "speed": "slow"},
+      "annotations": {"name": "Concasseur-Séparateur", "tag": "E-005", "spec": "500 kg/h noix"},
+      "narration": "Le concasseur-séparateur casse les noix de palme et sépare les amandes des coques par tri pneumatique."
+    },
+    {
+      "id": 8,
+      "type": "3d_model",
+      "duration": 20,
+      "source_images": ["chaudiere_E006_isometric.png", "chaudiere_E006_front.png"],
+      "split": [12, 8],
+      "ken_burns": {"direction": "slow_zoom_in", "speed": "slow"},
+      "annotations": {"name": "Chaudière Biomasse", "tag": "E-006", "spec": "Brevet B3 / 3 bar"},
+      "narration": "La chaudière biomasse brûle les fibres et coques pour produire la vapeur process. Brevet FOFAL B3 : chicanes optimisées."
+    },
+    {
+      "id": 9,
+      "type": "3d_model",
+      "duration": 20,
+      "source_images": ["gazeificateur_E007_isometric.png", "gazeificateur_E007_front.png"],
+      "split": [12, 8],
+      "ken_burns": {"direction": "pan_left", "speed": "slow"},
+      "annotations": {"name": "Gazéificateur", "tag": "E-007", "spec": "Brevet B5 / Syngas"},
+      "narration": "Le gazéificateur à circuit fermé convertit les déchets en syngas pour alimenter un groupe électrogène. Brevet B5 : autonomie énergétique complète."
+    },
+    {
+      "id": 10,
+      "type": "3d_model",
+      "duration": 20,
+      "source_images": ["presse-palmiste_E008_isometric.png", "presse-palmiste_E008_right.png"],
+      "split": [12, 8],
+      "ken_burns": {"direction": "pan_right", "speed": "slow"},
+      "annotations": {"name": "Presse Palmiste", "tag": "E-008", "spec": "42% rendement"},
+      "narration": "La presse palmiste extrait l'huile de palmiste à 42% de rendement. Sous-produit : tourteau pour l'alimentation animale."
+    },
+    {
+      "id": 11,
+      "type": "montage",
+      "duration": 15,
+      "source_images": [
+        "cuiseur_E001_isometric.png",
+        "egrappoir_E002_isometric.png",
+        "digesteur-presse_E003_isometric.png",
+        "clarification_E004_isometric.png",
+        "concasseur_E005_isometric.png",
+        "chaudiere_E006_isometric.png",
+        "gazeificateur_E007_isometric.png",
+        "presse-palmiste_E008_isometric.png"
+      ],
+      "image_duration": 1.5,
+      "transition": "fade",
+      "narration": "Huit machines intégrées. Une ligne complète. De la réception des régimes au stockage de l'huile en 4 heures."
+    },
+    {
+      "id": 12,
+      "type": "text_overlay",
+      "duration": 10,
+      "text_lines": [
+        "75.3M FCFA",
+        "TRI 98%",
+        "Payback 16 mois",
+        "9 brevets",
+        "8 machines"
+      ],
+      "style": "animated_counters",
+      "narration": "Un investissement de 75 millions avec un retour en 16 mois. Neuf brevets d'innovation protégeant huit machines."
+    },
+    {
+      "id": 13,
+      "type": "branding",
+      "duration": 5,
+      "text": "FOFAL",
+      "subtitle": "contact@fofal.cm",
+      "style": "fade_out",
+      "narration": null
+    }
+  ]
+}

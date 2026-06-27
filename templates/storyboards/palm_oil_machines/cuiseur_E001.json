@@ -1,0 +1,81 @@
+{
+  "id": "cuiseur_E001_presentation",
+  "title": "Cuiseur-Stérilisateur E-001",
+  "subtitle": "E-001 — Vapeur saturée 3 bar",
+  "persona": "Investisseur",
+  "music": "corporate_ambient",
+  "music_volume": -18,
+  "voice": "daniel",
+  "language": "fr",
+  "render_dir": "~/modules-rh-authentification-expert-00-9/palm-oil-machinery/assets/renders",
+  "output": "~/modules-rh-authentification-expert-00-9/palm-oil-machinery/docs/videos/cuiseur_E001_presentation.mp4",
+  "scenes": [
+    {
+      "id": "scene_1_title",
+      "type": "title_card",
+      "duration": 3,
+      "background": "dark",
+      "text": {
+        "title": "Cuiseur-Stérilisateur E-001",
+        "tag": "E-001 — Vapeur saturée 3 bar"
+      }
+    },
+    {
+      "id": "scene_2_iso",
+      "type": "3d_model",
+      "duration": 12,
+      "view": "isometric",
+      "ken_burns": "slow_zoom_in",
+      "image": "cuiseur_E001_isometric.png",
+      "narration": "Le cuiseur-stérilisateur FOFAL traite les régimes de palme par vapeur saturée à 3 bars pendant 90 minutes. Deux cuves de 1.5 mètre cube fonctionnent en alternance pour un flux continu."
+    },
+    {
+      "id": "scene_3_rear",
+      "type": "3d_model",
+      "duration": 8,
+      "view": "isometric_rear",
+      "ken_burns": "pan_left",
+      "image": "cuiseur_E001_isometric_rear.png",
+      "narration": "L'accès arrière permet le chargement et le déchargement des paniers intérieurs. Les raccords vapeur sont dimensionnés en DN50."
+    },
+    {
+      "id": "scene_4_front",
+      "type": "3d_model",
+      "duration": 8,
+      "view": "front",
+      "ken_burns": "slow_zoom_in",
+      "image": "cuiseur_E001_front.png",
+      "narration": "En façade, le foyer en brique réfractaire et la cheminée cuivre évacuent les fumées. Hauteur totale : 3.78 mètres."
+    },
+    {
+      "id": "scene_5_right",
+      "type": "3d_model",
+      "duration": 8,
+      "view": "right",
+      "ken_burns": "pan_right",
+      "image": "cuiseur_E001_right.png",
+      "narration": "Vue latérale montrant la cuve extérieure en acier S235, le châssis en fonte et les anses de levage."
+    },
+    {
+      "id": "scene_6_top",
+      "type": "3d_model",
+      "duration": 6,
+      "view": "top",
+      "ken_burns": "zoom_out",
+      "image": "cuiseur_E001_top.png",
+      "narration": "Emprise au sol : 1.6 × 1.55 mètres. Implantation dans la zone de réception des régimes."
+    },
+    {
+      "id": "scene_7_specs",
+      "type": "specs_card",
+      "duration": 5,
+      "background": "dark",
+      "specs": {
+        "Matériaux": "Acier S235 / Inox / Brique réfractaire / Cuivre",
+        "Capacité": "2 × 1.5 m³ (alternance)",
+        "Pression": "3 bar vapeur saturée",
+        "Dimensions": "1.6 × 1.55 × 3.78 m"
+      }
+    }
+  ]
+}

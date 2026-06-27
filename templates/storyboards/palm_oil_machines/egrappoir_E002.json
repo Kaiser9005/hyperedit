@@ -1,0 +1,81 @@
+{
+  "id": "egrappoir_E002_presentation",
+  "title": "Égrappoir Rotatif E-002",
+  "subtitle": "E-002 — Séparation fruits/rafles",
+  "persona": "Investisseur",
+  "music": "corporate_ambient",
+  "music_volume": -18,
+  "voice": "daniel",
+  "language": "fr",
+  "render_dir": "~/modules-rh-authentification-expert-00-9/palm-oil-machinery/assets/renders",
+  "output": "~/modules-rh-authentification-expert-00-9/palm-oil-machinery/docs/videos/egrappoir_E002_presentation.mp4",
+  "scenes": [
+    {
+      "id": "scene_1_title",
+      "type": "title_card",
+      "duration": 3,
+      "background": "dark",
+      "text": {
+        "title": "Égrappoir Rotatif E-002",
+        "tag": "E-002 — Séparation fruits/rafles"
+      }
+    },
+    {
+      "id": "scene_2_iso",
+      "type": "3d_model",
+      "duration": 12,
+      "view": "isometric",
+      "ken_burns": "slow_zoom_in",
+      "image": "egrappoir_E002_isometric.png",
+      "narration": "L'égrappoir rotatif sépare les fruits des rafles à raison d'une tonne par heure. Le tambour perforé en inox laisse passer les fruits tout en évacuant les rafles en bout de ligne."
+    },
+    {
+      "id": "scene_3_rear",
+      "type": "3d_model",
+      "duration": 8,
+      "view": "isometric_rear",
+      "ken_burns": "pan_left",
+      "image": "egrappoir_E002_isometric_rear.png",
+      "narration": "Le moteur électrique de 3 kilowatts entraîne le tambour via un réducteur et des poulies. Accès maintenance par l'arrière."
+    },
+    {
+      "id": "scene_4_front",
+      "type": "3d_model",
+      "duration": 8,
+      "view": "front",
+      "ken_burns": "slow_zoom_in",
+      "image": "egrappoir_E002_front.png",
+      "narration": "La trémie de chargement reçoit les régimes stérilisés. La gouttière de collecte en inox récupère les fruits détachés."
+    },
+    {
+      "id": "scene_5_right",
+      "type": "3d_model",
+      "duration": 8,
+      "view": "right",
+      "ken_burns": "pan_right",
+      "image": "egrappoir_E002_right.png",
+      "narration": "Longueur totale : 3.35 mètres. Le châssis en fonte supporte les paliers UCP212 auto-alignants."
+    },
+    {
+      "id": "scene_6_top",
+      "type": "3d_model",
+      "duration": 6,
+      "view": "top",
+      "ken_burns": "zoom_out",
+      "image": "egrappoir_E002_top.png",
+      "narration": "Vue en plan montrant l'alignement tambour-moteur et l'emprise réduite pour intégration dans la ligne."
+    },
+    {
+      "id": "scene_7_specs",
+      "type": "specs_card",
+      "duration": 5,
+      "background": "dark",
+      "specs": {
+        "Matériaux": "Inox 304 / Fonte / Acier S235",
+        "Capacité": "1 t/h FFB",
+        "Puissance": "3 kW",
+        "Dimensions": "3.35 × 1.2 × 1.8 m"
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+project_slug: hyperedit
+tenant_name: HyperEdit
+language: en
+domain_tags: [video, ai, marketing, creative, remotion, kie]
+shared_knowledge_path: ~/.claude/shared-knowledge
+daily_source: daily/
+compile_model: claude-opus-4-6
+extract_model: claude-haiku-4-5-20251001
+dedup_threshold: 0.92
+stale_days: 30
+max_compile_turns: 15
+
+# HyperEdit-specific notes:
+# - Python 3.9+ runtime (not 3.12 like TerraFlow)
+# - 45 Python services: 20 video skills + 5 marketing builders + 8 infra + 12 misc
+# - AI services: KIE.ai, Gemini 2.5, ElevenLabs, fal.ai
+# - Output: ~/hyperedit-ai/output_videos/erp_tutorials/

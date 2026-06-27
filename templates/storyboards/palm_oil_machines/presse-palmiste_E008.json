@@ -1,0 +1,81 @@
+{
+  "id": "presse-palmiste_E008_presentation",
+  "title": "Presse Palmiste E-008",
+  "subtitle": "E-008 — Extraction huile palmiste",
+  "persona": "Investisseur",
+  "music": "corporate_ambient",
+  "music_volume": -18,
+  "voice": "daniel",
+  "language": "fr",
+  "render_dir": "~/modules-rh-authentification-expert-00-9/palm-oil-machinery/assets/renders",
+  "output": "~/modules-rh-authentification-expert-00-9/palm-oil-machinery/docs/videos/presse-palmiste_E008_presentation.mp4",
+  "scenes": [
+    {
+      "id": "scene_1_title",
+      "type": "title_card",
+      "duration": 3,
+      "background": "dark",
+      "text": {
+        "title": "Presse Palmiste E-008",
+        "tag": "E-008 — Extraction huile palmiste"
+      }
+    },
+    {
+      "id": "scene_2_iso",
+      "type": "3d_model",
+      "duration": 12,
+      "view": "isometric",
+      "ken_burns": "slow_zoom_in",
+      "image": "presse-palmiste_E008_isometric.png",
+      "narration": "La presse palmiste extrait l'huile de palmiste des amandes à 42% de rendement. La vis sans fin en acier traité comprime les amandes dans une cage perforée en inox."
+    },
+    {
+      "id": "scene_3_rear",
+      "type": "3d_model",
+      "duration": 8,
+      "view": "isometric_rear",
+      "ken_burns": "pan_left",
+      "image": "presse-palmiste_E008_isometric_rear.png",
+      "narration": "Le moteur de 3 kilowatts et le réducteur entraînent la vis. Accès maintenance pour le remplacement des bagues d'usure."
+    },
+    {
+      "id": "scene_4_front",
+      "type": "3d_model",
+      "duration": 8,
+      "view": "front",
+      "ken_burns": "slow_zoom_in",
+      "image": "presse-palmiste_E008_front.png",
+      "narration": "La trémie de chargement reçoit les amandes du concasseur. La sortie huile et la sortie tourteau sont séparées."
+    },
+    {
+      "id": "scene_5_right",
+      "type": "3d_model",
+      "duration": 8,
+      "view": "right",
+      "ken_burns": "pan_right",
+      "image": "presse-palmiste_E008_right.png",
+      "narration": "Le châssis en fonte supporte l'ensemble. Le filtre en inox purifie l'huile palmiste brute."
+    },
+    {
+      "id": "scene_6_top",
+      "type": "3d_model",
+      "duration": 6,
+      "view": "top",
+      "ken_burns": "zoom_out",
+      "image": "presse-palmiste_E008_top.png",
+      "narration": "Emprise compacte, positionnement en fin de ligne après le concasseur-séparateur."
+    },
+    {
+      "id": "scene_7_specs",
+      "type": "specs_card",
+      "duration": 5,
+      "background": "dark",
+      "specs": {
+        "Matériaux": "Acier traité / Inox 304 / Fonte",
+        "Capacité": "200 kg/h amandes",
+        "Puissance": "3 kW",
+        "Dimensions": "1.2 × 0.6 × 1.0 m"
+      }
+    }
+  ]
+}

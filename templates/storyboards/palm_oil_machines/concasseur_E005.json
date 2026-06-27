@@ -1,0 +1,81 @@
+{
+  "id": "concasseur_E005_presentation",
+  "title": "Concasseur-Séparateur E-005",
+  "subtitle": "E-005 — Cassage noix de palme",
+  "persona": "Investisseur",
+  "music": "corporate_ambient",
+  "music_volume": -18,
+  "voice": "daniel",
+  "language": "fr",
+  "render_dir": "~/modules-rh-authentification-expert-00-9/palm-oil-machinery/assets/renders",
+  "output": "~/modules-rh-authentification-expert-00-9/palm-oil-machinery/docs/videos/concasseur_E005_presentation.mp4",
+  "scenes": [
+    {
+      "id": "scene_1_title",
+      "type": "title_card",
+      "duration": 3,
+      "background": "dark",
+      "text": {
+        "title": "Concasseur-Séparateur E-005",
+        "tag": "E-005 — Cassage noix de palme"
+      }
+    },
+    {
+      "id": "scene_2_iso",
+      "type": "3d_model",
+      "duration": 12,
+      "view": "isometric",
+      "ken_burns": "slow_zoom_in",
+      "image": "concasseur_E005_isometric.png",
+      "narration": "Le concasseur-séparateur casse les noix de palme et trie les amandes par différence de densité. Le rotor à marteaux en fonte opère à haute vitesse."
+    },
+    {
+      "id": "scene_3_rear",
+      "type": "3d_model",
+      "duration": 8,
+      "view": "isometric_rear",
+      "ken_burns": "pan_left",
+      "image": "concasseur_E005_isometric_rear.png",
+      "narration": "Le moteur de 4 kilowatts entraîne le rotor via courroie. Le volant d'inertie régularise le couple."
+    },
+    {
+      "id": "scene_4_front",
+      "type": "3d_model",
+      "duration": 8,
+      "view": "front",
+      "ken_burns": "slow_zoom_in",
+      "image": "concasseur_E005_front.png",
+      "narration": "La trémie de chargement et le tamis de calibrage. Les grilles interchangeables adaptent la granulométrie."
+    },
+    {
+      "id": "scene_5_right",
+      "type": "3d_model",
+      "duration": 8,
+      "view": "right",
+      "ken_burns": "pan_right",
+      "image": "concasseur_E005_right.png",
+      "narration": "Le carter en fonte protège le rotor. Les paliers supportent les charges d'impact du concassage."
+    },
+    {
+      "id": "scene_6_top",
+      "type": "3d_model",
+      "duration": 6,
+      "view": "top",
+      "ken_burns": "zoom_out",
+      "image": "concasseur_E005_top.png",
+      "narration": "Emprise compacte dans un châssis structurel. Positionnement en aval de la presse palmiste."
+    },
+    {
+      "id": "scene_7_specs",
+      "type": "specs_card",
+      "duration": 5,
+      "background": "dark",
+      "specs": {
+        "Matériaux": "Fonte / Acier S235",
+        "Capacité": "500 kg/h noix",
+        "Puissance": "4 kW",
+        "Dimensions": "1.0 × 0.7 × 1.4 m"
+      }
+    }
+  ]
+}

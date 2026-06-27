@@ -1,0 +1,81 @@
+{
+  "id": "clarification_E004_presentation",
+  "title": "Clarificateur Vortex E-004",
+  "subtitle": "E-004 — Brevet B2 décantation centrifuge",
+  "persona": "Investisseur",
+  "music": "corporate_ambient",
+  "music_volume": -18,
+  "voice": "daniel",
+  "language": "fr",
+  "render_dir": "~/modules-rh-authentification-expert-00-9/palm-oil-machinery/assets/renders",
+  "output": "~/modules-rh-authentification-expert-00-9/palm-oil-machinery/docs/videos/clarification_E004_presentation.mp4",
+  "scenes": [
+    {
+      "id": "scene_1_title",
+      "type": "title_card",
+      "duration": 3,
+      "background": "dark",
+      "text": {
+        "title": "Clarificateur Vortex E-004",
+        "tag": "E-004 — Brevet B2 décantation centrifuge"
+      }
+    },
+    {
+      "id": "scene_2_iso",
+      "type": "3d_model",
+      "duration": 12,
+      "view": "isometric",
+      "ken_burns": "slow_zoom_in",
+      "image": "clarification_E004_isometric.png",
+      "narration": "Le clarificateur vortex FOFAL, protégé par le brevet B2, sépare l'huile des boues par décantation centrifuge. Double cuve pour décantation primaire et secondaire."
+    },
+    {
+      "id": "scene_3_rear",
+      "type": "3d_model",
+      "duration": 8,
+      "view": "isometric_rear",
+      "ken_burns": "pan_left",
+      "image": "clarification_E004_isometric_rear.png",
+      "narration": "La tuyauterie de transfert entre les deux cuves assure un flux continu. Raccords en inox alimentaire."
+    },
+    {
+      "id": "scene_4_front",
+      "type": "3d_model",
+      "duration": 8,
+      "view": "front",
+      "ken_burns": "slow_zoom_in",
+      "image": "clarification_E004_front.png",
+      "narration": "Les chicanes internes créent un vortex qui accélère la séparation huile-eau. Capacité de traitement ajustée à 1 tonne par heure."
+    },
+    {
+      "id": "scene_5_right",
+      "type": "3d_model",
+      "duration": 8,
+      "view": "right",
+      "ken_burns": "pan_right",
+      "image": "clarification_E004_right.png",
+      "narration": "Les pieds en fonte supportent les deux cuves. Hauteur permettant la gravité naturelle vers le stockage."
+    },
+    {
+      "id": "scene_6_top",
+      "type": "3d_model",
+      "duration": 6,
+      "view": "top",
+      "ken_burns": "zoom_out",
+      "image": "clarification_E004_top.png",
+      "narration": "Vue en plan des deux cuves et de la tuyauterie de raccordement. Emprise optimisée pour le bâtiment process."
+    },
+    {
+      "id": "scene_7_specs",
+      "type": "specs_card",
+      "duration": 5,
+      "background": "dark",
+      "specs": {
+        "Matériaux": "Inox 304 / Fonte",
+        "Capacité": "1 t/h CPO",
+        "Brevet": "B2 — Vortex",
+        "Dimensions": "1.8 × 0.9 × 1.6 m"
+      }
+    }
+  ]
+}

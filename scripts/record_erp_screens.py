@@ -9,6 +9,7 @@ V-I-V: Real screen recordings, not static screenshots or stock images.
 
 import asyncio
 import json
+import os
 import sys
 import time
 from pathlib import Path
@@ -23,8 +24,15 @@ from playwright.async_api import async_playwright
 # ---------------------------------------------------------------------------
 
 ERP_URL = "https://modules-rh-authentification-expert.vercel.app"
-LOGIN_EMAIL = "ivanfodjo@hotmail.com"
-LOGIN_PASSWORD = "Admin123!"
+# Credentials are read from the environment (load via .env — see .env.example).
+# Never hardcode credentials in source. Guarded by .claude/hooks/scan-secrets.sh.
+LOGIN_EMAIL = os.environ.get("ERP_LOGIN_EMAIL", "")
+LOGIN_PASSWORD = os.environ.get("ERP_LOGIN_PASSWORD", "")
+if not LOGIN_EMAIL or not LOGIN_PASSWORD:
+    raise SystemExit(
+        "ERP_LOGIN_EMAIL and ERP_LOGIN_PASSWORD must be set "
+        "(export them or add to a gitignored .env — see .env.example)."
+    )
 
 OUTPUT_DIR = Path(__file__).resolve().parent.parent / "assets" / "erp_recordings"
 
